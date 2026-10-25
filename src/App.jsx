@@ -3,6 +3,7 @@ import Layout from './components/Layout/Layout';
 import Home from './pages/Home/Home';
 import Characters from './pages/Characters/Characters';
 import CharacterDetail from './pages/CharacterDetail/CharacterDetail';
+import NotFound from './pages/NotFound/NotFound';
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/personajes" element={<Characters />} />
         <Route path="/personajes/:id" element={<CharacterDetail />} />
+        {/* Cualquier ruta que no coincida con las anteriores */}
+        <Route path="*" element={<NotFound />} />
       </Route>
     </Routes>
   );
