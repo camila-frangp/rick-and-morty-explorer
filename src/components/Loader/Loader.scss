@@ -1,0 +1,25 @@
+@use '../../styles/variables' as *;
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 4rem 0;
+  color: $color-text-muted;
+
+  &__portal {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 5px solid $color-surface;
+    border-top-color: $color-primary;
+    animation: girar 0.9s linear infinite;
+  }
+}
+
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,29 @@
+@use '../../styles/variables' as *;
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  &::before {
+    content: '';
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background-color: currentColor;
+  }
+
+  &--alive {
+    color: $color-alive;
+  }
+
+  &--dead {
+    color: $color-dead;
+  }
+
+  &--unknown {
+    color: $color-unknown;
+  }
+}
