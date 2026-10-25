@@ -1,0 +1,20 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  border-top: 1px solid $color-border;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  color: $color-text-muted;
+
+  p {
+    margin: 0.25rem 0;
+  }
+
+  a {
+    color: $color-primary;
+  }
+
+  &__small {
+    font-size: 0.85rem;
+  }
+}

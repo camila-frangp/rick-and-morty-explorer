@@ -1,0 +1,25 @@
+// Colores
+$color-bg: #0f1419;
+$color-surface: #1a2129;
+$color-surface-hover: #222b35;
+$color-border: #2c3742;
+$color-text: #e6edf3;
+$color-text-muted: #8b98a5;
+$color-primary: #97ce4c;
+$color-primary-dark: #6fa32f;
+$color-primary-light: #e4f9b8;
+$color-accent: #44c8e8;
+
+// Estados de los personajes
+$color-alive: #55cc44;
+$color-dead: #d63d2e;
+$color-unknown: #9e9e9e;
+
+// Tipografía
+$font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+// Medidas
+$radius: 12px;
+$radius-pill: 999px;
+$max-width: 1200px;
+$transition: 0.2s;
