@@ -1,0 +1,65 @@
+@use '../../styles/variables' as *;
+
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2.5rem;
+
+  &__pages {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  &__button,
+  &__page {
+    font: inherit;
+    color: $color-text;
+    background-color: $color-surface;
+    border: 1px solid $color-border;
+    cursor: pointer;
+    transition: border-color $transition, color $transition, background-color $transition;
+
+    &:hover:not(:disabled) {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+
+  &__button {
+    padding: 0.55rem 1rem;
+    border-radius: $radius-pill;
+  }
+
+  &__page {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 0.5rem;
+    border-radius: 8px;
+
+    &--active,
+    &--active:hover:not(:disabled) {
+      color: $color-bg;
+      background-color: $color-primary;
+      border-color: $color-primary;
+      font-weight: 700;
+    }
+  }
+
+  &__dots {
+    padding: 0 0.25rem;
+    color: $color-text-muted;
+  }
+}
