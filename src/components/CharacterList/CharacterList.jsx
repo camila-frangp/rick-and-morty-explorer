@@ -7,6 +7,7 @@ function CharacterList({ personajes }) {
       {personajes.map((personaje) => (
         <li key={personaje.id}>
           <CharacterCard
+            id={personaje.id}
             nombre={personaje.name}
             imagen={personaje.image}
             estado={personaje.status}
