@@ -1,0 +1,70 @@
+@use '../../styles/variables' as *;
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius;
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1 1 160px;
+
+    &--grow {
+      flex: 3 1 260px;
+    }
+
+    label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: $color-text-muted;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 0.65rem 0.8rem;
+      font: inherit;
+      color: $color-text;
+      background-color: $color-bg;
+      border: 1px solid $color-border;
+      border-radius: 8px;
+      transition: border-color $transition;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primary;
+      }
+    }
+  }
+
+  &__clear {
+    flex: 0 0 auto;
+    padding: 0.65rem 1.2rem;
+    font: inherit;
+    color: $color-text;
+    background-color: transparent;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: border-color $transition, color $transition;
+
+    &:hover:not(:disabled) {
+      border-color: $color-primary;
+      color: $color-primary;
+    }
+
+    &:disabled {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  }
+}

@@ -15,4 +15,10 @@
     margin: 0.25rem 0 0;
     color: $color-text-muted;
   }
+
+  &__empty {
+    padding: 3rem 1rem;
+    text-align: center;
+    color: $color-text-muted;
+  }
 }
